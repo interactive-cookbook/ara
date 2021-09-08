@@ -106,8 +106,8 @@
         },
         "use_mst_decoding_for_validation": true
     },
-    "train_data_path": "../../../data/English/Parser/train.conllu",
-    "validation_data_path": "../../../data/English/Parser/dev.conllu",
+    "train_data_path": "./data/Parser/train.conllu",
+    "validation_data_path": "./data/Parser/dev.conllu",
     "trainer": {
         "cuda_device": 3,
         "grad_norm": 5,
