@@ -48,14 +48,14 @@ Run `allennlp evaluate [archive file] [input file] --output-file [output file]` 
 
 ### Performance
 
-<!-- 
-Tagger performance on the [English corpus](https://github.com/coli-saar/interactive-cookbook/tree/master/data/English/Tagger) (test.conll03):
+Tagger performance (on `./data/Tagger/test.conll03`):
 
-Embedder | Precision | Recall | F-Score
---- | --- | --- | ---
-English ELMo | 89.9 | 89.2 | 89.6 
-multilingual BERT | 88.7 | 88.4 | 88.5 
--->
+Precision | Recall | F-Score
+ --- | --- | ---
+89.9 ± 0.5 | 89.2 ± 0.4 | 89.6 ± 0.3
+
+
+<!--
 Our tagger's performance compared to Y'20's performance and inter-annotator agreement (IAA).
 
 Model | Corpus | Embedder | Precision  | Recall | F-Score  
@@ -68,18 +68,19 @@ Our tagger  | [300-r by Y'20](https://github.com/coli-saar/interactive-cookbook/
 | | | | | 
 Our tagger  | [German](https://github.com/coli-saar/interactive-cookbook/tree/master/data/German/Tagger) | [German ELMo](Taggers/tagger_with_german_elmo.json) | 79.2 ± 1.4 | 81.2 ± 1.8 | 80.2 ± 1.6
 Our tagger  | [German](https://github.com/coli-saar/interactive-cookbook/tree/master/data/German/Tagger) | [multilingual BERT](Taggers/tagger_with_bert_config.json) | 75.3 ± 0.8 | 76.0 ± 1.0 | 75.7 ± 0.9
+-->
 
 
 
-<!-- 
-Parser performance on the [English corpus](https://github.com/coli-saar/interactive-cookbook/tree/master/data/English/Parser) (test.conllu):
+Parser performance (on `./data/Parser/test.conllu`):
 
 Tag Source | Precision | Recall | F-Score
 --- | --- | --- | ---
-gold tags | 80.4 | 76.1 | 78.2 
-our tagger with ELMo embeddings | 74.4 | 70.4 | 72.3
--->
+gold tags | 80.4 ± 0.0 | 76.1 ± 0.0 | 78.2 ± 0.0 
+our tagger | 74.4 ± 0.5 | 70.4 ± 1.0 | 72.3 ± 0.8
 
+
+<!--
 Our parser's performance compared to Y'20's performance and inter-annotator agreement (IAA).
 
 Model | Corpus |  Tag source | Precision  | Recall | F-Score 
@@ -98,6 +99,7 @@ Model | Corpus |  Tag source | Precision  | Recall | F-Score
 Y'20 | 300-r by Y'20 | Y'20 tagger | 51.1 | 37.7 | 43.3
 Our parser  | [300-r by Y'20](https://github.com/coli-saar/interactive-cookbook/tree/master/data/English/Parser) | [our ELMo tagger](Taggers/tagger_with_english_elmo.json) | 74.4 ± 0.5 | 70.4 ± 1.0 | **72.3** ± 0.8
 Our parser  | [German](https://github.com/coli-saar/interactive-cookbook/tree/master/data/German/Parser) | [German ELMo tagger](Taggers/tagger_with_german_elmo.json) | 56.5 ± 1.1 | 82.8 ± 2.2 | 67.1 ± 0.5
+-->
 
 ## Prediction
 
