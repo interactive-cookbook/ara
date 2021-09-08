@@ -2,7 +2,7 @@
 
 ## Recipes
 
-This corpus comprises recipes for 10 different dishes with 11 recipes each. The recipes were obtained from the [Microsoft Research Multimodal Aligned Recipe Corpus](https://github.com/microsoft/multimodal-aligned-recipe-corpus) and parsed into action graphs, i.e. into dependency graphs over phrases of recipe text which describe actions. Typically, such actions are verb forms. 
+This corpus comprises 10 different dishes with 11 recipes each. The recipes were obtained from the [Microsoft Research Multimodal Aligned Recipe Corpus](https://github.com/microsoft/multimodal-aligned-recipe-corpus) and parsed into action graphs, i.e. into dependency graphs over phrases of recipe text which describe actions. Typically, such actions are verb forms. 
 
 ### CoNLL-U format
 
@@ -16,16 +16,12 @@ The recipes are presented in the [CoNLL-U](https://universaldependencies.org/for
 
 ## Alignments
 
+This corpus presents crowdsourced alignments between the actions of two recipes at a time. For each dish, we compare 10 such recipe pairs in a cascading manner from the longest to the shortest recipe. Thus, the alignments indicate which action from the shorter of two recipes corresponds best to an action from the longer recipe.
 
+### Data Format
 
-
-
-## Sources 
-- alignments crowdsourced
-- tagging, parsing automated
-
-## Data Format
-
-### CoNLL-U
-
-### Alignments
+The alignments are collected in one tsv file per dish with the following columns:
+- the *first* column (`file1`) contains the name of the source recipe (i.e. the longer of the two recipes).
+- the *second* column (`token1`) contains the token index of the first token of an action phrase in the source recipe.
+- the *third* column (`file2`) contains the name of the target recipe (i.e. the shorter of the two recipes).
+- the *fourth* column (`token2`) contains the token index of the first token of the aligned action in the target recipe.
