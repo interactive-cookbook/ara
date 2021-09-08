@@ -12,6 +12,14 @@ You can find all the requirements in the file `requirement.txt`.
 - Flair 0.8.0.post1
 - AllenNLP 0.9.0
 
+## Data Format
+
+The Alignment Model requires recipes parsed into action graphs in [CoNLL-U format](https://universaldependencies.org/format.html) (see [../data](../data)).
+
+### Tagging and Parsing
+
+For tagging raw recipe text and parsing tagged recipes into dependency graphs, we used the models described by the [AllenNLP](https://github.com/allenai/allennlp) configuration files in [./preprocessing](./preprocessing).
+
 ## Usage
 
 Download the corpus from [here](https://github.com/coli-saar/ara/data/) into `./data` folder for reproducing our experiment results. Additionally, create the results folder where the trained models and their test results will be saved (**Notes:** You can change the hyperparameters and the path names in the file `constants.py`). Per default, the script looks for the following results folders:
