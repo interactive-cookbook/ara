@@ -1,5 +1,7 @@
 # Tagger and Parser
 
+The recipes in the ARA corpus were tagged and parsed by the here presented models. The models were trained on the data in [./data](./data).
+
 ## Environment setup
 1. Create a conda environment with Python 3.7
 ```
@@ -18,7 +20,7 @@ pip install allennlp==0.8.4
 
 ## Parameter configuration
 
-Adjust parameters including file paths in the respective `.json` config files, as needed. By default, the paths point to datasets in [`../../../data`](../../data). See respective README files there for details about the datasets. 
+Adjust parameters including file paths in the respective `.json` config files, as needed. By default, the paths point to datasets in [`./data`](./data). See respective README files there for details about the datasets. 
 
 Both our models consume data in CoNLL format where each line represents a token and columns are tab-separated. The column DEPRELS contains additional dependency relations if a token has more than one head.The tagger requires data in the [CoNLL-2003](https://www.clips.uantwerpen.be/conll2003/ner/) format with the relevant columns being the first (TEXT) and the fourth (LABEL). The parser requires data in the [CoNLL-U](https://universaldependencies.org/format.html) format with the relevant columns being the second (FORM), the  fifth (LABEL), the seventh (HEAD) and the eighth (DEPREL). 
 
