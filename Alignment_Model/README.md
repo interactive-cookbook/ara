@@ -18,7 +18,7 @@ The Alignment Model requires recipes parsed into action graphs in [CoNLL-U forma
 
 ### Tagging and Parsing
 
-For tagging raw recipe text and parsing tagged recipes into dependency graphs, we used the models described by the [AllenNLP](https://github.com/allenai/allennlp) configuration files in [./preprocessing](./preprocessing).
+For tagging raw recipe text and parsing tagged recipes into dependency graphs, we used the models described <!-- by the [AllenNLP](https://github.com/allenai/allennlp) configuration files --> in [./preprocessing](./preprocessing). 
 
 ## Usage
 
