@@ -112,4 +112,4 @@ The ouput of the parser will be in JSON format. To transform this into the bette
 - `-p [model output]` where `[model output]` is the tagger or parser output in json format. 
 - `-o [file]` to state where you want to save the output. Default: `[model output].conllu`.
 
-For sample inputs and outputs see [./Samples](./Samples). 
+For sample inputs and outputs see [data/Samples](./data/Samples). 
