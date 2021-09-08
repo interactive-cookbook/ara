@@ -14,7 +14,7 @@ You can find all the requirements in the file `requirement.txt`.
 
 ## Usage
 
-Download the corpus from [here](https://github.com/coli-saar/interactive-cookbook/tree/master/data/Alignment) into `./data` folder for reproducing our experiment results. Additionally, create the results folder where the trained models and their test results will be saved (**Notes:** You can change the hyperparameters and the path names in the file `constants.py`). Per default, the script looks for the following results folders:
+Download the corpus from [here](https://github.com/coli-saar/ara/data/) into `./data` folder for reproducing our experiment results. Additionally, create the results folder where the trained models and their test results will be saved (**Notes:** You can change the hyperparameters and the path names in the file `constants.py`). Per default, the script looks for the following results folders:
 
 Model Name | Saves To
 --- | ---
