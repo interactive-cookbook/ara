@@ -12,9 +12,9 @@
             }
         }
     },
-    "train_data_path": "../../../data/English/Tagger/train.conll03",
-    "validation_data_path": "../../../data/English/Tagger/dev.conll03",
-    "test_data_path": "../../../data/English/Tagger/test.conll03",
+    "train_data_path": "./data/Tagger/train.conll03",
+    "validation_data_path": "./data/Tagger/dev.conll03",
+    "test_data_path": "./data/Tagger/test.conll03",
     "evaluate_on_test": true,
     "model": {
         "type": "crf_tagger",
