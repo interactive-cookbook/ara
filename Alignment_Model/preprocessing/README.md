@@ -20,23 +20,19 @@ pip install allennlp==0.8.4
 
 ## Parameter configuration
 
-Adjust parameters including file paths in the respective `.json` config files, as needed. By default, the paths point to datasets in [`./data`](./data). See respective README files there for details about the datasets. 
+Adjust parameters including file paths in the respective `.json` config files, as needed. By default, the paths point to datasets in [`./data`](./data). See there for details about the dataset. 
 
 Both our models consume data in CoNLL format where each line represents a token and columns are tab-separated. The column DEPRELS contains additional dependency relations if a token has more than one head.The tagger requires data in the [CoNLL-2003](https://www.clips.uantwerpen.be/conll2003/ner/) format with the relevant columns being the first (TEXT) and the fourth (LABEL). The parser requires data in the [CoNLL-U](https://universaldependencies.org/format.html) format with the relevant columns being the second (FORM), the  fifth (LABEL), the seventh (HEAD) and the eighth (DEPREL). 
 
-Available configurations:
-- `Taggers/tagger_with_bert_config.json` - BiLSTM-CRF tagger using BERT embeddings
-- `Taggers/tagger_with_english_elmo_config.json` - BiLSTM-CRF tagger using English ELMo embeddings
-- `Taggers/tagger_with_german_elmo_config.json` - BiLSTM-CRF tagger using German ELMo embeddings
-- `Parser/parser_config.json` - Biaffine dependency parser (Dozat and Manning, 2017)
+Models:
+- `tagger_config.json` - BiLSTM-CRF tagger using English ELMo embeddings
+- `parser_config.json` - Biaffine dependency parser (Dozat and Manning, 2017)
 
-For the ELMo taggers, we use the following ELMo parameters (i.e. options and weights):
-- English: [weights and options](https://allennlp.s3.amazonaws.com/models/ner-model-2018.12.18.tar.gz) (use the weights and options files under `fta/` after unzipping)
-- German: [weights](https://github.com/t-systems-on-site-services-gmbh/german-elmo-model/releases/download/files_1/weights.hdf5) and [options](https://github.com/t-systems-on-site-services-gmbh/german-elmo-model/releases/download/files_1/options.json)
+For the ELMo tagger, we use the following ELMo parameters (i.e. options and weights): [weights and options](https://allennlp.s3.amazonaws.com/models/ner-model-2018.12.18.tar.gz) (use the weights and options files under `fta/` after unzipping).
 
 **Internal note**: the ELMo options and weight files can be found on the Saarland servers at `/proj/cookbook/`.
 
-The weights and options files should be named and placed according to the paths specified in the .json files; alternatively, adjust the paths in the .json files.
+The weights and options files should be named and placed according to the paths specified in the `*config.json` files; alternatively, adjust the paths in the `*config.json` files.
 
 ## Training
 
@@ -111,9 +107,9 @@ Run `allennlp predict [archive file] [input file] --use-dataset-reader --output-
 - `use-dataset-reader` tells the parser to use the same dataset reader as it used during training.
 - `[output file]` is an optional path to save parsing results as JSON; if not provided, the output will be displayed on the console.
 
-The ouput of the parser will be in JSON format. To transform this into the better readable CoNLL-U format, run the [../../data-handling/read_prediction.py](../../data-handling/read_prediction.py) with the following arguments:
+The ouput of the parser will be in JSON format. To transform this into the better readable CoNLL-U format, run the [read_prediction.py](./read_prediction.py) with the following arguments:
 - `-m [mode]` where `[mode]` can be either `analysis` (for error analysis), `tagger_p2c` (translates tagger output into CoNLL-U file) or `parser_p2c` (translates parser output into CoNLL-U format).
 - `-p [model output]` where `[model output]` is the tagger or parser output in json format. 
 - `-o [file]` to state where you want to save the output. Default: `[model output].conllu`.
 
-For sample inputs and outputs see [English/Samples](../../data/English/Samples). 
+For sample inputs and outputs see [./Samples](./Samples). 
