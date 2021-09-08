@@ -1,4 +1,4 @@
-# English Corpus
+# Tagger and Parser training corpus
 
 The **original data** by Yamakata et al. (2020) can be found at [flowgraph](https://sites.google.com/view/yy-lab/resource/english-recipe-flowgraph) and [NER](https://sites.google.com/view/yy-lab/resource/english-recipe-ner).
 
@@ -61,4 +61,4 @@ and	CC	O	O
 
 ### Samples
 
-For English, we provide some sample files for the input and output of our tagger and parser. All files contain the same single recipe which is part of the training split of the English corpus.
+We provide some sample files for the input and output of our tagger and parser. All files contain the same single recipe which is part of the training split of the corpus.
