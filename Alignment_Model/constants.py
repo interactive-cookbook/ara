@@ -44,6 +44,6 @@ prediction_file = "prediction.tsv"  # Testing results
 
 # Data file paths and names
 
-folder = "./data"  # Dataset folder
+folder = "../data"  # Dataset folder
 recipe_folder_name = "recipes"  # Folder containing recipes
 alignment_file = "alignments.tsv"  # Alignment file
