@@ -1,0 +1,125 @@
+{
+    "dataset_reader": {
+        "type": "universal_dependencies",
+        "use_language_specific_pos": true,
+        "token_indexers": {
+            "bert": {
+                "type": "bert-pretrained",
+                "pretrained_model": "bert-base-multilingual-cased",
+	    	"truncate_long_sequences": false
+            }
+        }
+    },
+    "iterator": {
+        "type": "bucket",
+        "batch_size": 10,
+        "sorting_keys": [
+            [
+                "words",
+                "num_tokens"
+            ]
+        ]
+    },
+    "model": {
+        "type": "biaffine_parser",
+        "arc_representation_dim": 500,
+        "dropout": 0.3,
+        "encoder": {
+            "type": "stacked_bidirectional_lstm",
+            "hidden_size": 400,
+            "input_size": 868,
+            "num_layers": 3,
+            "recurrent_dropout_probability": 0.3,
+            "use_highway": true
+        },
+        "initializer": [
+            [
+                ".*projection.*weight",
+                {
+                    "type": "xavier_uniform"
+                }
+            ],
+            [
+                ".*projection.*bias",
+                {
+                    "type": "zero"
+                }
+            ],
+            [
+                ".*tag_bilinear.*weight",
+                {
+                    "type": "xavier_uniform"
+                }
+            ],
+            [
+                ".*tag_bilinear.*bias",
+                {
+                    "type": "zero"
+                }
+            ],
+            [
+                ".*weight_ih.*",
+                {
+                    "type": "xavier_uniform"
+                }
+            ],
+            [
+                ".*weight_hh.*",
+                {
+                    "type": "orthogonal"
+                }
+            ],
+            [
+                ".*bias_ih.*",
+                {
+                    "type": "zero"
+                }
+            ],
+            [
+                ".*bias_hh.*",
+                {
+                    "type": "lstm_hidden_bias"
+                }
+            ]
+        ],
+        "input_dropout": 0.3,
+        "pos_tag_embedding": {
+            "embedding_dim": 100,
+            "sparse": true,
+            "vocab_namespace": "pos"
+        },
+        "tag_representation_dim": 100,
+        "text_field_embedder": {
+            "allow_unmatched_keys": true,
+            "embedder_to_indexer_map": {
+                "bert": ["bert", "bert-offsets"],
+                "token_characters": ["token_characters"]
+            },
+            "token_embedders": {
+                "bert": {
+                    "type": "bert-pretrained",
+                    "pretrained_model":"bert-base-multilingual-cased",
+                    "top_layer_only": true,
+                    "requires_grad": false
+                }
+            }
+        },
+        "use_mst_decoding_for_validation": true
+    },
+    "train_data_path": "./data/Parser/train.conllu",
+    "validation_data_path": "./data/Parser/dev.conllu",
+    "trainer": {
+        "cuda_device": 3,
+        "grad_norm": 5,
+        "num_epochs": 80,
+        "optimizer": {
+            "type": "dense_sparse_adam",
+            "betas": [
+                0.9,
+                0.9
+            ]
+        },
+        "patience": 10,
+        "validation_metric": "+LAS"
+    }
+}

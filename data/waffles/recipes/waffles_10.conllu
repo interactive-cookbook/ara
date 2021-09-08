@@ -1,0 +1,11 @@
+1	Sift	_	_	B-A	_	9	edge	_	_
+2	flour	_	_	O	_	0	root	_	_
+3	&	_	_	O	_	0	root	_	_
+4	dry	_	_	O	_	0	root	_	_
+5	Mix	_	_	B-A	_	9	edge	_	_
+6	wet	_	_	O	_	0	root	_	_
+7	Mis	_	_	B-A	_	9	edge	_	_
+8	together	_	_	O	_	0	root	_	_
+9	Fold	_	_	B-A	_	0	root	_	_
+10	in	_	_	O	_	0	root	_	_
+11	whites	_	_	O	_	0	root	_	_
