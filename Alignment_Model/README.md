@@ -14,7 +14,7 @@ You can find all the requirements in the file `requirement.txt`.
 
 ## Data Format
 
-The Alignment Model requires recipes parsed into action graphs in [CoNLL-U format](https://universaldependencies.org/format.html) (see [../data](../data)).
+The Alignment Model requires recipes parsed into action graphs in [CoNLL-U format](https://universaldependencies.org/format.html) and alignment information for action pairs presented in tsv format (see [../data](../data)).
 
 ### Tagging and Parsing
 
