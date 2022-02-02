@@ -1,28 +1,12 @@
 # Aligned Recipe Actions (ARA)
 
-This repository contains the **A**ligned **R**ecipe **A**ctions corpus from the below paper. We also provide the code for our alignment model described in said paper.
+This repository contains the **A**ligned **R**ecipe **A**ctions corpus from the paper below. 
 
-*Aligning Actions Across Recipe Graphs* <br>
-To appear in the Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing (EMNLP).
-Lucia Donatelli, Theresa Schmidt, Debanjali Biswas, Arne Köhn, Fangzhou Zhai, Alexander Koller <br>
-Dept. of Language Science and Technology, Saarland Informatics Campus, Saarland University, Germany
+Lucia Donatelli, Theresa Schmidt, Debanjali Biswas, Arne Köhn, Fangzhou Zhai, Alexander Koller (2021).
+[Aligning Actions Across Recipe Graphs](https://aclanthology.org/2021.emnlp-main.554/).
+Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing (EMNLP).
 
-<!--
-```
-@inproceedings{donatelli2021aligning,
-  title={Aligning Actions Across Recipe Graphs},
-  author={Donatelli, Lucia and 
-          Schmidt, Theresa and 
-          Biswas, Debanjali and 
-          Köhn, Arne and 
-          Zhai, Fangzhou and 
-          Koller, Alexander},
-  booktitle={Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
-  pages={},
-  year={2021}
-}
-```
--->
+The code for the recipe-action alignment model is available [here](https://github.com/interactive-cookbook/alignment-models).
 
 Contact Person: Dr. Lucia Donatelli (donatelli@coli.uni-saarland.de)
 
