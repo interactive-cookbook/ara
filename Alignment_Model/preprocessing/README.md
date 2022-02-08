@@ -15,6 +15,12 @@ conda activate allennlp
 ```
 pip install allennlp==0.8.4
 ```
+You may also need to install further packages with versions as specified in `requirements.txt`.
+
+Usage:
+```
+pip install -r requirements.txt
+```
 
 **Internal note**: this is already set up on the Saarland servers, see details [here](https://github.com/coli-saar/am-parser/wiki/Setup-and-file-locations-on-the-Saarland-servers).
 
