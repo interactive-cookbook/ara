@@ -6,7 +6,7 @@ This repository contains the **A**ligned **R**ecipe **A**ctions corpus from the 
 > [Aligning Actions Across Recipe Graphs](https://aclanthology.org/2021.emnlp-main.554/).
 > Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing (EMNLP).
 
-The code for the recipe-action alignment model is available [here](https://github.com/interactive-cookbook/alignment-models).
+The code for the most recent version of the recipe-action alignment model is available [here](https://github.com/interactive-cookbook/alignment-models).
 
 Contact Person: Dr. Lucia Donatelli (donatelli@coli.uni-saarland.de)
 
