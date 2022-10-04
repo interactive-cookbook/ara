@@ -6,7 +6,7 @@ This repository contains the **A**ligned **R**ecipe **A**ctions corpus from the 
 > [Aligning Actions Across Recipe Graphs](https://aclanthology.org/2021.emnlp-main.554/).
 > Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing (EMNLP).
 
-The code for the most recent version of the recipe-action alignment model is available [here](https://github.com/interactive-cookbook/alignment-models).
+The code for the most recent version of the recipe-action alignment model is available [here](https://github.com/interactive-cookbook/alignment-models). (Please note that the data in that repository is the ARA 1.0 corpus.) 
 
 Contact Person: Dr. Lucia Donatelli (donatelli@coli.uni-saarland.de)
 
@@ -30,5 +30,6 @@ This work is licensed under a
 
 Our corpus consists of recipes for 10 different dishes from the [Microsoft Research Multimodal Aligned Recipe Corpus](https://github.com/microsoft/multimodal-aligned-recipe-corpus). For each dish, there are 11 recipes parsed into action graphs. We provide crowdsourced action alignments between the action phrases of **10 recipe pairings per dish**. These alignments indicate which action from the shorter of two recipes corresponds best to an action from the longer recipe. 
 
-
+The data folder contains an updated version (ARA 1.1) of the originally created corpus in which part of the within-sentence punctuation was missing. This punctuation was added back in the updated version. For more details on the differences between ARA 1.0 and ARA 1.1 see [here](https://github.com/kastein/ara/blob/main/data/README.md#ara-10-vs-ara-11).
+The originally created corpus version is available as Release [ARA 1.10 Corpus](https://github.com/kastein/ara/releases/tag/v1.0).
 
