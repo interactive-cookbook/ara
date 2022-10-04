@@ -46,7 +46,7 @@ Example extract from ARA 1.0 waffles_4.conllu
 17	Mix	_	_	B-A	_	25	edge	_	_
 ```
 
-Corresponding example extract from ARA 1.1 waffles_4.connlu
+Corresponding example extract from ARA 1.1 waffles_4.conllu
 ```
 7	Sift	_	_	B-A	_	20	edge	_	_
 8	flour	_	_	O	_	0	root	_	_
